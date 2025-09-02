@@ -1,0 +1,27 @@
+Package: knowledgeSharing
+Title: Knowledge Sharing Analysis via Sliding Window Centroids
+Version: 0.0.1
+Authors@R: 
+    person(given = "Christopher",
+           family = "Holland",
+           role = c("aut", "cre"),
+           email = "you@example.com")
+Description: Analyze how conversational semantics shift over time by computing 
+    centroids over sliding windows in a shared LSA space. Provides windowed centroid
+    trajectories, cosine similarity to previous windows, and plotting helpers.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 4.1)
+Imports:
+    tm,
+    lsa,
+    ggplot2,
+    dplyr,
+    purrr,
+    tibble,
+    magrittr
+Suggests:
+    roxygen2,
+    testthat
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
