@@ -9,8 +9,8 @@ It uses Latent Semantic Analysis (LSA) to build a shared semantic space, then ap
 
 The approach implemented in this package is inspired by the work of Andy Dong in the foundational paper:
 
-Dong, A. (2005). The latent semantic approach to studying design team communication. Design Studies, 26(5), 445–461.
-https://doi.org/10.1016/j.destud.2004.12.003
+> Dong, A. (2005). The latent semantic approach to studying design team communication. Design Studies, 26(5), 445–461.
+> https://doi.org/10.1016/j.destud.2004.12.003
 
 Dong introduced the concept of a semantic centroid for a team, and measured how individual contributions converge toward or diverge from this centroid over time. This method has since been adapted for broader use in communication analysis.
 
