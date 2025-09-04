@@ -63,10 +63,23 @@ visualize_ks_plot <- function(change_df, title_prefix = "") {
     ) +
     ggplot2::theme_minimal()
 
+  euclid_colored_by_cosine_plot <- ggplot2::ggplot(
+    change_df, ggplot2::aes(x = anchor_time, y = delta_euclid)
+  ) +
+    ggplot2::geom_line() +
+    ggplot2::geom_point(ggplot2::aes(color = cosine_to_prev), size = 1.5) +
+    ggplot2::scale_color_gradient(low = "blue", high = "red", name = "Cosine\nSimilarity") +
+    ggplot2::labs(
+      title = paste0(title_prefix, "Cosine vs Euclidean (Euclidean values colored by Cosine Similarity)"),
+      x = "Time (anchor)", y = "Euclidean Distance"
+    ) +
+    ggplot2::theme_minimal()
+
   list(
     cosine_plot = cosine_plot,
     euclid_plot = euclid_plot,
     combined_plot = combined_plot,
-    cosine_colored_by_euclid_plot = cosine_colored_by_euclid_plot
+    cosine_colored_by_euclid_plot = cosine_colored_by_euclid_plot,
+    euclid_colored_by_cosine_plot = euclid_colored_by_cosine_plot
   )
 }
